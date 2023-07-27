@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="shortcut icon" href="/calculator-coins-svgrepo-com.svg" type="image/x-icon">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="part" id="topContainer">
+            <div class="title">Bill total</div>
+            <div class="inputPart">
+                <span>₹</span>
+                <input 
+                onkeyup = "calculateBill()"
+                type="text" 
+                placeholder="0.00" 
+                id="billTotalInput">
+            </div>
+        </div>
+        <div class="part">
+            <div class="title">Tip</div>
+            <div class="inputPart">
+                <span>%</span>
+                <input 
+                onkeyup = "calculateBill()"
+                type="text" 
+                placeholder="10" 
+                id="tipInput">
+            </div>
+        </div>
+        <div class="part" id="bottomContainer">
+            <div class="splitPart">
+                <div class="title">People</div>
+                <div class="controls">
+                    <span class="buttonPart">
+                        <button class="splitButton" id="plusBtn">
+                            <span class="buttonText">+</span>
+                        </button>
+                    </span>
+                    <span class="splitAmount" id="numberOfPeople">1</span>
+                    <span class="buttonPart">
+                        <button class="splitButton" id="minusBtn">
+                            <span class="buttonText">-</span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="totalAmount">
+                <div class="title">Total per person</div>
+                <div class="total" id="perPersonTotal"><span>₹</span>0.00</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
